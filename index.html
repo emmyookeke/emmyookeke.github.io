@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>David Emeka Okeke Portfolio</title>
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+<style>
+/* CSS for changing color on hover */
+#menu ul li a {
+        color: rgb(255, 255, 255); /* Default color */
+        text-decoration: none; /* Remove underline */
+        transition: color 0.1s; /* Smooth transition */
+    }
+
+    #menu ul li a:hover {
+        color: rgb(255, 196, 0); /* Color on hover */
+    }
+
+
+    #digital-text {
+    font-family: monospace;
+    font-size: 36px;
+    color: rgb(247, 166, 4);
+    z-index: 1000; /* Ensure it stays above other elements */
+    position: fixed;
+    display: block; /* Ensure it's visible by default */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    #digital-text {
+        font-size: 15px;
+        
+    }
+   
+}
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+        padding-top: 60px;
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+    }
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .gallery_product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the button horizontally */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    width: 100%; /* Ensure the container takes full width */
+    margin-top: 10px; /* Add some margin to separate the button from the image */
+}
+
+.btn-default.filter-button {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.container {
+    position: relative;
+}
+
+.socil-icon {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 20px 0 0; /* Adjust margin as needed */
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    width: 100%;
+}
+
+.socil-icon li {
+    margin: 0 10px; /* Adjust spacing between icons */
+}
+
+.socil-icon a {
+    color: #000; /* Set the icon color */
+    font-size: 24px; /* Set the icon size */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.socil-icon a:hover {
+    color: #f7a604; /* Change color on hover */
+}
+
+/* Media query for mobile view */
+@media (max-width: 767px) {
+    .socil-icon {
+        position: static;
+        margin: 20px auto; /* Center the icons horizontally */
+        
+}
+
+}
+
+</style>
+    <body>
+       <!--########################### Header Starts Here ###################### -->
+        <div class="home-screen container-fluid">
+          <div class="home-cover">
+                <div id="menu-jk" class="header">
+                   <div class="container">
+                       <div class="row">
+                           <div class="col-md-3 logo">
+                               <img class="logo-wt" src="assets/images/logo.png" alt="">
+                               <img class="logo-gry" src="assets/images/logo-gray.png" alt="">
+                               
+                               <a data-toggle="collapse" data-target="#menu" href="#menu"><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                           </div>
+                           <div id="menu" class="col-md-9 d-none d-md-block">
+                               <ul>
+                                   <li><a href="#">Home</a></li>
+                                   <li><a href="#about_us">About Me</a></li>
+                                   <li><a href="#services">Competencies</a></li>
+                                   <li><a href="#skills">My Skills</a></li>
+                                   <li><a href="#testimonial">Testimonials</a></li>
+                                   <li><a href="#portfolio">Projects</a></li>
+                                   <li><a href="#contact_us">Contact Me</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+                <div class="container">
+                   <div class="row home-detail">
+                      <div class="col-md-5 animated bounceInLeft hom-img">
+                          <img src="assets/images/name.png" alt="">
+                      </div>
+                      <div class="col-md-7 animated bounceInRight homexp">
+                        
+                           <h5>Hello I'm</h5>
+                           <h2>David Emeka Okeke</h2>
+                           <div id="digital-text"></div>
+                           <script>
+                            // Define the array of lines to display
+                            const lines = [
+                                "Professional Social Scientist, Data Analyst, Data Scientist and Data Specialist",
+                                "Proficient in using Python for data analysis and machine learning tasks.",
+                                "Skilled in managing relational databases including SQL Server and MySQL",
+                                "Experienced in data visualization using tools like Tableau, Power BI, and Matplotlib",
+                                "Proficient in using DAX for data analysis and visualization.",
+                                "Proficient in cloud computing platforms such as AWS, Azure, and GCP.",
+                                "Proficient in big data technologies such as Hadoop, Spark, Hive, Kafka, and Cassandra.",
+                                "I have a solution to all data related issues."
+                            ];
+                        
+                            // Get the element where text will be displayed
+                            const digitalText = document.getElementById("digital-text");
+                        
+                            // Function to display lines of text one after the other
+                            function displayDigitalText() {
+                                // Clear previous content
+                                digitalText.innerHTML = "";
+                        
+                                // Initialize line index and character index to 0
+                                let lineIndex = 0;
+                                let charIndex = 0;
+                        
+                                // Function to display next line or character
+                                function displayNextLineOrCharacter() {
+                                    // Get the current line
+                                    const line = lines[lineIndex % lines.length];
+                        
+                                    // If there are characters left to display in the line
+                                    if (charIndex < line.length) {
+                                        // Add next character to digital text
+                                        digitalText.textContent += line[charIndex];
+                                        charIndex++;
+                                    } else {
+                                        // If all characters in the line are displayed, move to the next line
+                                        lineIndex++;
+                                        charIndex = 0;
+                                        digitalText.textContent = ""; // Clear the digital text for the next line
+                                    }
+                        
+                                    // Call displayNextLineOrCharacter again after a delay
+                                    setTimeout(displayNextLineOrCharacter, 200); // Adjust the delay here (in milliseconds)
+                                }
+                        
+                                // Start displaying lines and characters
+                                displayNextLineOrCharacter();
+                            }
+                        
+                            // Display digital text when the page loads
+                            displayDigitalText();
+                            
+                        </script>
+                       
+                           <ul class="socil-icon">
+                                <li>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                                    <a href="https://www.linkedin.com/in/emeka-obinna-okeke-836740192/" target="_blank"><i class="fab fa-linkedin"></i></a> 
+                                </li>
+                                <li>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                                    <a href="https://www.facebook.com/profile.php?id=100031615142275
+                                    " target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                                    <a href="https://twitter.com/emekaookeke" target="_blank"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                                    <a href="https://www.instagram.com/spaco4life2012/" target="_blank"><i class="fab fa-instagram"></i></a> 
+                                </li>
+                                <li>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                       <p> </p>
+                                    <a href="https://github.com/emmyookeke" target="_blank"><i class="fab fa-github"></i></a>
+                                </li>
+                                                                                             
+                           </ul>
+                       </div>
+                   </div>
+
+                </div>
+          </div>
+        </div>
+        
+        <!--########################### About US Starts Here ###################### -->
+        
+        
+
+        <div id="about_us" class="about-us container-fluid">
+            <div class="container">
+                <div class="session-title row">
+                    <h2>About Me</h2>
+                    <div class="heading-line"></div>
+                </div>
+                <div class="about-row row">
+                    <div class="image-col col-md-4">
+                        <img src="assets/images/about.png" alt="">
+                        <a href="https://drive.google.com/file/d/1Ieb9JbvVI4ORmFpI-JBFYPM94WrI_Bk0/view?usp=drive_link" class="btn btn-default filter-button" id="downloadCVBtn">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
+                 
+                    <div class="detail-col col-md-8">
+                        <h2>David Emeka Okeke</h2>
+                        <h6>Social Scientist | Data Analyst | Data Scientist | Data Specialist</h6>
+                        <p class="justified">I am a dedicated and experienced Data Scientist with over 5 years of expertise in querying, updating, manipulating, and analyzing data from various sources to support decision-making. Proficient in using Excel, SQL, Python, Power BI, and Tableau for data analysis, visualization, and communication. Skilled in SPSS and experienced with Big Data technologies and cloud computing. With a keen eye for data analysis and a robust understanding of machine learning algorithms, I am ready to drive impactful data-driven solutions. An excellent communicator with exceptional proficiency in translating technical information to decision-makers.</p>
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div class="info-list">
+                                    <ul>
+                                        <li><span>Location:</span>Canada</li>
+                                        <li><span>Degree:</span>Masters</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="info-list">
+                                    <ul>
+                                        <li><span>Email:</span>emekaookeke@gmail.com</li>
+                                        <li><span>Phone:</span>+1 (705) 817-9011</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        
+               
+           <!--########################### Competencies Starts Here ###################### -->
+           
+          <div id="services"  class="services container-fluid">
+           <div class="container">
+               <div class="session-title row">
+                    <h2>Competencies</h2>
+                    <div class="heading-line"></div>
+                </div>
+                <div class="services-row row">
+                    <div class="col-md-4 seric-div">
+                        <div class="service-card">
+                            <i class="fab fa-uikit"></i>
+                            <h4>Data Analysis & Strategic Decision Making</h4>
+                            <p>Proficient in data analysis to drive strategic decision-making, providing actionable insights and recommendations to guide teams towards achieving objectives. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 seric-div">
+                        <div class="service-card">
+                           <i class="fab fa-uikit"></i>
+                            <h4>Market Analysis & Competitive Intelligence</h4>
+                            <p>
+                                Capable of monitoring and analyzing competitive activity, customer behavior, and market trends to identify opportunities and threats for organizational growth.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 seric-div">
+                        <div class="service-card">
+                            <i class="fab fa-uikit"></i>
+                            <h4>Performance Evaluation & Improvement</h4>
+                            <p>
+                                
+Skilled in monitoring performance metrics to identify areas for improvement and implementing corrective actions to enhance performance by determining making relevant recommendations.
+</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 seric-div">
+                        <div class="service-card">
+                            <i class="fab fa-uikit"></i>
+                            <h4>Reporting & Communication</h4>
+                            <p>
+                                Proficient in preparing accurate reports from internal and external data sources, effectively presenting findings to communicate updates on performance and insights to the management team.
+                                </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 seric-div">
+                        <div class="service-card">
+                           <i class="fab fa-uikit"></i>
+                            <h4>Process Improvement & Automation</h4>
+                            <p>
+                                Assist in enhancing operational efficiency by improving processes and automating data analysis processes, aiming to improve efficiency and accuracy.
+                                </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 seric-div">
+                        <div class="service-card">
+                            <i class="fab fa-uikit"></i>
+                            <h4>Forecasting & Compliance</h4>
+                            <p>
+                                Skilled in developing forecasting models for annual Volume Rebate reports, to ensure compliance and accurate reporting, thereby maintaining data integrity.
+                                </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 seric-div">
+                        <div class="service-card">
+                            <i class="fab fa-uikit"></i>
+                            <h4>Team Leadership & Collaboration</h4>
+                            <p>
+                                
+Proficient in leading and guiding Support Analysts, offering mentorship and support to adept at collaborating with teams to accomplish desired objectives and drive organizational success.
+
+                                </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 seric-div">
+                        <div class="service-card">
+                            <i class="fab fa-uikit"></i>
+                            <h4>Data Management and Analysis Tools</h4>
+                            <p>
+                                
+Proficient in diverse data analysis tasks, utilizing SQL Server, MySQL, PostgreSQL, MongoDB, Jupyter Notebook, and capable of presenting insights through visualizations and dashboards using Tableau and Powe BI.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 seric-div">
+                            <div class="service-card">
+                                <i class="fab fa-uikit"></i>
+                                <h4>Client / Stakeholder Engagement & Policy Knowledge</h4>
+                                <p>
+                                    
+Skilled in creating and managing Customer / stakeholder relationships effectively and able to Manage of complex, sensitive and high-profile policy development issues.
+                                    </p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+               
+        <!--########################### Skills Starts Here ###################### -->
+        <div id="skills"  class="skills container-fluid">
+            <div class="container">
+                <div class="session-title row">
+                     <h2>My Skills</h2>
+                     <div class="heading-line"></div>
+                </div>
+
+            <div class="row">
+                <div class="col-md-6 skii-div tech-skill">
+                    <div class="title">
+                        <h2>Technical Skill</h2>
+                    </div>
+                    
+                    <ul>
+                        <li>
+                            <label for="">Data Analysis and Machine Learning (Python, NumPy, pandas, scikit-learn, ARIMA, SPSS, RapidMiner)
+                                </label>
+                                <div class="progress">
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                        </li>
+                         <li>
+                            <label for="">Database Management (SQL Server, MySQL, PostgreSQL, MongoDB)
+                                </label>
+                                <div class="progress">
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                        </li>
+                         <li>
+                            <label for="">Data Visualization (Tableau, Power BI, DAX, ggplot2, Seaborn, Matplotlib)
+                                </label>
+                                <div class="progress">
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                        </li>
+                         <li>
+                            <label for="">Cloud Computing (AWS, Azure, Google Cloud Platform)
+                                </label>
+                                <div class="progress">
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                        </li>
+
+                    </li>
+                    <li>
+                       <label for="">Geospatial Analysis Tools (ArcGIS, Google Earth Pro)
+                        </label>
+                           <div class="progress">
+                             <div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                           </div>
+                   </li>
+                         
+                    </ul>
+                </div>
+                <div class="col-md-6 skii-div pro-skill">
+                    <div class="title">
+                        <h2>Technical Skill</h2>
+                    </div>
+                     <ul>
+                        <li>
+                            <label for="">Integrated Development Environments (Jupyter Notebook, Visual Studio Code)
+                                </label>
+                            <div class="progress">
+                              <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                         <li>
+                            <label for="">Collaboration and Communication (Microsoft Office 365, Google Workspace, Microsoft Teams, Slack, GitHub)
+                                </label>
+                            <div class="progress">
+                              <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                         <li>
+                            <label for="">Survey and Data Collection (QuestionPro, SurveyMonkey, Google Forms, CSPro, KoboCollect)
+                                </label>
+                            <div class="progress">
+                              <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                         <li>
+                            <label for="">Big Data Technologies (Hadoop, Spark, Hive, Kafka, Cassandra)
+                                </label>
+                            <div class="progress">
+                              <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="">Data Integration (Talend open studio)
+                            </label>
+                            <div class="progress">
+                              <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+         
+    </div>
+</div>
+               
+         <!--  ************************* Testimonials  Starts Here ************************** -->
+
+     <section id="testimonial" class="customer-serv">
+            <div class="container">
+                <div class="row session-title">
+                    <h2>Testimonials</h2>
+                    <div class="heading-line"></div>
+                </div>
+    
+                <div class="row ro-clo">
+                    <div data-anijs="if: scroll, on: window, do: bounceInLeft animated, before: scrollReveal" class="col-12  col-md-6 col-lg-4">
+                        <div class="shado-2 card-b">
+                            <p>"David has been an invaluable asset to our team. His keen eye for detail and deep understanding of data analysis has helped us make informed decisions that significantly boosted our project outcomes. His ability to translate complex data into understandable insights is truly impressive."</p>
+                        </div>
+                        <div class="cust-det row">
+                            <div class="col-sm-3 col-3 img-circl">
+                                <img alt="" src="assets/images/testimonial/member-01.jpg">
+                            </div>
+                            <div class="col-sm-5 col-5 an-mtc no-padding">
+                                <b>Richard Rinaldo</b>
+                                <p>(Coordinator - Big Data Analytics & Research Analyst Programs at Georgian College)</p>
+                            </div>
+                            <div class="col-sm-4 col-4 star-par">
+                                <ul class="stars">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12  col-md-6 col-lg-4">
+                        <div class="shado-2 card-b">
+                            <p> "Working with David was a game-changer for our team. His proficiency with tools like SQL, Python, and Power BI allowed us to uncover hidden patterns in our data, leading to substantial improvements in our operational efficiency. His professionalism and dedication to his craft are unmatched."
+                            </p>
+                        </div>
+                        <div class="cust-det row">
+                            <div class="col-sm-3 col-3 img-circl">
+                                <img alt="" src="assets/images/testimonial/member-02.jpg">
+                            </div>
+                            <div class="col-sm-5 col-5 an-mtc no-padding">
+                                <b>Brunilda Xhaferllari</b>
+                                <p>(Project Coordinator Big Data Analytics - Georgian College)</p>
+                            </div>
+                            <div class="col-sm-4  col-4 star-par">
+                                <ul class="stars">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-anijs="if: scroll, on: window, do: bounceInRight animated, before: scrollReveal" class="col-12  col-md-6 col-lg-4">
+                        <div class="shado-2 card-b">
+                            <p>"David’s analytical skills are top-notch. He has consistently provided us with high-quality data analysis that has been crucial for our strategic planning. His ability to present data in a clear and compelling manner makes complex information accessible to all stakeholders."</p>
+                        </div>
+                        <div class="cust-det row">
+                            <div class="col-sm-3 col-3 img-circl">
+                                <img alt="" src="assets/images/testimonial/member-03.jpg">
+                            </div>
+                            <div class="col-sm-5 col-5 an-mtc no-padding">
+                                <b>Aisha Dadi</b>
+                                <p>(Program Director- Society for Family Health)</p>
+                            </div>
+                            <div class="col-sm-4 col-4 star-par">
+                                <ul class="stars">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+        </section>   
+              
+        
+  
+    
+    <!--  ************************* Projects Starts Here ************************** -->
+        <div id="portfolio" class="gallery">    
+           <div class="container">
+              <div class="session-title row">
+                    <h2>Projects</h2>
+                    <p>Take a look at some of my projects</p>
+                    <div class="heading-line"></div>
+                </div>
+              <div class="row">
+             
+
+                <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <img src="assets/images/gallery/gallery_01.jpg" class="img-responsive">
+                    <div class="button-container">
+                        <a href="https://github.com/emmyookeke/Air-Quality-Project" class="btn btn-default filter-button">View Project</a>
+                    </div>
+                </div>
+
+                <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                <img src="assets/images/gallery/gallery_02.jpg" class="img-responsive">
+                <div class="button-container">
+                <a href="https://github.com/emmyookeke/Canada-Housing-Project" class="btn btn-default filter-button">View Project</a>
+            </div>
+            </div>
+
+            <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                <img src="assets/images/gallery/gallery_03.jpg" class="img-responsive">
+                <div class="button-container">
+                <a href="https://github.com/emmyookeke/Talend-Project" class="btn btn-default filter-button">View Project</a>
+                </div>
+            </div>
+
+                <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                <img src="assets/images/gallery/gallery_04.jpg" class="img-responsive">
+                <div class="button-container">
+                    <a href="https://github.com/emmyookeke/Real-time-Netflix-Data-Streaming" class="btn btn-default filter-button">View Project</a>
+                    </div>
+            </div>
+            
+                <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                <img src="assets/images/gallery/gallery_05.jpg" class="img-responsive">
+                <div class="button-container">
+                <a href="https://github.com/emmyookeke/Movie-Database-Project" class="btn btn-default filter-button">View Project</a>
+                </div>
+            </div>
+
+                <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                <img src="assets/images/gallery/gallery_06.jpg" class="img-responsive">
+                <div class="button-container">
+                <a href="https://github.com/emmyookeke/Telco-Customer-Churn-Analysis" class="btn btn-default filter-button">View Project</a>
+                </div>
+            </div>
+
+                <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                <img src="assets/images/gallery/gallery_09.jpg" class="img-responsive">
+                <div class="button-container">
+                <a href="https://github.com/emmyookeke/HIV-Dataset-Storytelling-Project-using-Tableau" class="btn btn-default filter-button">View Project</a>
+                </div>
+            </div>
+
+                <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                <img src="assets/images/gallery/gallery_08.jpg" class="img-responsive">
+                <div class="button-container">
+                <a href="https://github.com/emmyookeke/Food-Delivery-Service-Dashboard" class="btn btn-default filter-button">View Project</a>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+       
+       
+       </div>
+        <!-- ######## Gallery End ####### -->    
+        
+          
+             <!--  ************************* Contact  Starts Here ************************** -->
+                                      
+             <section id="contact_us" class="contact-us-single">
+                <div class="row no-margin">
+                    <div class="col-sm-6 no-padding">
+                         <iframe style="width:100%" src="https://www.google.com/maps/embed/v1/place?q=84+Hawthorn+crescent,+Barrie,+Ontario&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" height="480" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-sm-6 cop-ck">
+                        <h2>Contact Form</h2>
+                        <form id="contactForm">
+                            <div class="row cf-ro">
+                                <div class="col-sm-3"><label>Enter Name:</label></div>
+                                <div class="col-sm-8"><input type="text" placeholder="Enter Name" name="name" class="form-control input-sm" required></div>
+                            </div>
+                            <div class="row cf-ro">
+                                <div class="col-sm-3"><label>Email Address:</label></div>
+                                <div class="col-sm-8"><input type="email" name="email" placeholder="Enter Email Address" class="form-control input-sm" required></div>
+                            </div>
+                            <div class="row cf-ro">
+                                <div class="col-sm-3"><label>Mobile Number:</label></div>
+                                <div class="col-sm-8"><input type="tel" name="phone" placeholder="Enter Mobile Number" class="form-control input-sm" required></div>
+                            </div>
+                            <div class="row cf-ro">
+                                <div class="col-sm-3"><label>Enter Message:</label></div>
+                                <div class="col-sm-8">
+                                  <textarea rows="5" name="message" placeholder="Enter Your Message" class="form-control input-sm" required></textarea>
+                                </div>
+                            </div>
+                            <div class="row cf-ro">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-8">
+                                 <button type="submit" class="btn btn-default filter-button">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <script>
+                document.getElementById('contactForm').onsubmit = function(event) {
+                    event.preventDefault();
+                    
+                    var formData = new FormData(this);
+            
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "send_contact_email.php", true);
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            alert("Your message has been sent!");
+                            document.getElementById('contactForm').reset();
+                        }
+                    };
+                    xhr.send(formData);
+                };
+            </script>
+    
+                          
+    <!--  ************************* Footer  Starts Here ************************** -->
+
+    <footer class="container-fluid footer">
+        <div class="container">
+            <div class="row footerro">
+                <span class="tt">Personal Profile</span>
+                <p> 
+                    <span><a href="#">Home</a></span>
+                    <span><a href="#about_us">About Me</a></span>
+                    <span><a href="#services">Competencies</a></span>
+                    <span><a href="#skills">My Skills</a></span>
+                    <span><a href="#testimonial">Testimonials</a></span>
+                    <span><a href="#portfolio">Projects</a></span>
+                    <span><a href="#contact_us">Contact Me</a></span>
+                 </p>
+                <a href="">Copyright © emekaookeke.com | All right reserved.</a>
+            </div>
+        </div>
+    </footer>                                                                                                                                          
+                
+        
+    </body>
+
+
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+    <script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</html>
